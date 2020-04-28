@@ -7,7 +7,7 @@ const prefixlst = require('./jsondb/prefix.json');
 app.use(morgan('short'));
 
 app.get("/checkproviderph/:number", (req, res)=>{
-  
+
   var input = req.params.number;
   var prefix = input.slice(0,4);
 
@@ -23,10 +23,10 @@ app.get("/checkproviderph/:number", (req, res)=>{
   else
     res.send("Prefix not found or incorrect format. Follow 11 digit PH Mobile number 09XXXXXXXXX.")
 
-  
+
 
 });
 
-app.listen(80, () => {
-  console.log("Server is up listening at port 80");
+app.listen(9000, () => {
+  console.log("Server is up listening at port 9000");
 });
